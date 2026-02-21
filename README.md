@@ -8,6 +8,8 @@ View README.html or visit https://tribe-framework.org
 
 Tribe is a web project management framework that allows us to build platforms, products, applications and web interfaces using a modular approach. It provides a coherent language for UX, content, design and code collaborations.
 
+This is Kaldi Moss.
+
 ## License
 
 The GNU General Public License is a free, copyleft license for software and other kinds of works.
