@@ -67,6 +67,7 @@ $spacers: (
 @import "ember-power-select";
 
 
+
 /* Whole page width and center feel */
 
 /* Section spacing */
@@ -100,6 +101,21 @@ ul {
 hr {
   border-top: 2px solid white;
 }
+
+
+.two-column-container {
+
+  display: flex; /* Makes the container a flex container */
+  gap: 10px; /* Adds space between columns */
+}
+
+.column {
+  flex: 1; /* Each column takes an equal fraction of the available space */
+  padding: 15px;
+  border: 0px solid #ccc;
+}
+
+
 
 .body {
  background-image: url('/assets/img/website_bg.png');
