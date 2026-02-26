@@ -24,6 +24,12 @@
 }
 
 @font-face {
+  font-family: "iso";
+  src: url("/assets/isonorm.ttf") format("truetype");
+}
+
+
+@font-face {
   font-family: "ocrb";
   src: url("/assets/OCRB.ttf") format("truetype");
 }
@@ -156,7 +162,7 @@ h1 {
   //margin-bottom: 30px;
   text-transform: uppercase;
   // border-bottom: 2px solid #ddd;
-  padding: 25px;
+  //padding: 25px;
   color: white;
 }
 
@@ -182,7 +188,7 @@ h2 {
   margin-bottom: 30px;
   text-transform: uppercase;
   // border-bottom: 2px solid #ddd;
-  padding: 25px;
+  //padding: 25px;
   color: white;
 }
 
@@ -221,11 +227,11 @@ h4 {
 
 p {
   font-family: 'ocra';
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 25px;
   padding-bottom: 5px;
   color: white;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {
