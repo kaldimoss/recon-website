@@ -3,10 +3,10 @@
 // $font-family-sans-serif: "IBM Plex Mono", serif !default;
 // $display-font-family: "IBM Plex Mono", serif !default;
 
-// @font-face {
-//   font-family: "rnc";
-//   src: url("/assets/R&C-Demo.otf") format("opentype");
-// }
+@font-face {   
+  font-family: "ibm_mono";
+ src: url("/assets/IBMPlexMono-Text.woff2");
+ }
 
 @font-face {
   font-family: "dagh";
@@ -18,50 +18,69 @@
   src: url("/assets/IBMPlexSans_Condensed-Regular.ttf") format("truetype");
 }
 
-$primary:       #000000 !default;
-$secondary:     #cccccc !default;
-$success:       #00ff00 !default;
-$info:          #0000ff !default;
-$warning:       #ffff00 !default;
-$danger:        #ff0000 !default;
-$light:         #eeeeee !default;
-$dark:          #333333 !default;
+@font-face {
+  font-family: "ocra";
+  src: url("/assets/OCRA.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ocrb";
+  src: url("/assets/OCRB.ttf") format("truetype");
+}
+
+
+
+.work-sans-100 {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+
+$primary: #000000 !default;
+$secondary: #cccccc !default;
+$success: #00ff00 !default;
+$info: #0000ff !default;
+$warning: #ffff00 !default;
+$danger: #ff0000 !default;
+$light: #eeeeee !default;
+$dark: #333333 !default;
 
 $enable-rounded: false !default;
-$enable-negative-margins:     true !default;
-$enable-cssgrid:              true !default;
+$enable-negative-margins: true !default;
+$enable-cssgrid: true !default;
 
 $spacer: 1rem !default;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: $spacer * 4.5,
-  7: $spacer * 6,
-  8: $spacer * 7.5,
-  9: $spacer * 9,
-  10: $spacer * 12,
+$spacers: (0: 0,
+1: $spacer * .25,
+2: $spacer * .5,
+3: $spacer,
+4: $spacer * 1.5,
+5: $spacer * 3,
+6: $spacer * 4.5,
+7: $spacer * 6,
+8: $spacer * 7.5,
+9: $spacer * 9,
+10: $spacer * 12,
 ) !default;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/animate.css/animate";
 
 .flame-bg {
-	background: linear-gradient(0deg, rgba(153,51,153,1) 0%, rgba(255,51,153,1) 100%);
-	background-color: rgba(0, 0, 0, 0);
-	background-position-x: 0%;
-	background-position-y: 0%;
-	background-repeat: repeat;
-	background-attachment: scroll;
-	background-image: linear-gradient(0deg, rgb(153, 51, 153) 0%, rgb(255, 51, 153) 100%);
-	background-size: auto;
-	background-origin: padding-box;
-	background-clip: border-box;
-	height: 100vh;
-	width: 100vw;
+  background: linear-gradient(0deg, rgba(153, 51, 153, 1) 0%, rgba(255, 51, 153, 1) 100%);
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: linear-gradient(0deg, rgb(153, 51, 153) 0%, rgb(255, 51, 153) 100%);
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  height: 100vh;
+  width: 100vw;
 }
 
 @import "ember-power-select";
@@ -74,15 +93,17 @@ $spacers: (
 .section {
   margin-bottom: 60px;
 }
+
 h3 {
   margin-top: 25px;
   font-size: 20px;
 }
 
 /* Make paragraph text cleaner */
-p, ul {
+p,
+ul {
   font-size: 16px;
-  color:white;
+  color: white;
   text-align: start;
 }
 
@@ -105,12 +126,15 @@ hr {
 
 .two-column-container {
 
-  display: flex; /* Makes the container a flex container */
-  gap: 10px; /* Adds space between columns */
+  display: flex;
+  /* Makes the container a flex container */
+  gap: 10px;
+  /* Adds space between columns */
 }
 
 .column {
-  flex: 1; /* Each column takes an equal fraction of the available space */
+  flex: 1;
+  /* Each column takes an equal fraction of the available space */
   padding: 15px;
   border: 0px solid #ccc;
 }
@@ -118,7 +142,7 @@ hr {
 
 
 .body {
- background-image: url('/assets/img/website_bg.png');
+  background-image: url('/assets/img/website_bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -128,10 +152,10 @@ hr {
 h1 {
   // font-family: 'rnc';
   font-weight: 700;
-  font-size: 78px;
-  margin-bottom: 30px;
+  font-size: 30px;
+  //margin-bottom: 30px;
   text-transform: uppercase;
-  border-bottom: 2px solid #ddd;
+  // border-bottom: 2px solid #ddd;
   padding: 25px;
   color: white;
 }
@@ -139,7 +163,7 @@ h1 {
 /* 768px se niche font chhota */
 @media (max-width: 768px) {
   h1 {
-    font-size: 45px;
+    font-size: 24px;
   }
 }
 
@@ -151,14 +175,26 @@ h1 {
 }
 
 
-h3{
+h2 {
+  // font-family: 'rnc';
+  font-weight: 200;
+  font-size: 12px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  // border-bottom: 2px solid #ddd;
+  padding: 25px;
+  color: white;
+}
+
+
+h3 {
   font-family: 'dagh';
-  font-weight: 700;
-  font-size: 35px;
+  font-weight: 500;
+  font-size: 16px;
   margin-bottom: 25px;
   padding-bottom: 5px;
   color: white;
-   line-height: 1.6;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -169,12 +205,12 @@ h3{
 
 /* 500px se niche aur chhota */
 @media (max-width: 500px) {
-  h3{
+  h3 {
     font-size: 20px;
   }
 }
 
-h4{
+h4 {
   font-family: 'dagh';
   font-weight: 700;
   font-size: 25px;
@@ -182,14 +218,16 @@ h4{
   padding-bottom: 5px;
   color: white;
 }
-p{
-   font-family: 'ibm';
-  font-size: 25px;
+
+p {
+  font-family: 'ocra';
+  font-size: 13px;
   margin-bottom: 25px;
   padding-bottom: 5px;
   color: white;
-   line-height: 1.6;
+  line-height: 1.6;
 }
+
 @media (max-width: 768px) {
   p {
     font-size: 20px;
@@ -198,70 +236,79 @@ p{
 
 /* 500px se niche aur chhota */
 @media (max-width: 500px) {
-  p{
+  p {
     font-size: 19;
   }
 }
 
-strong{
+strong {
   color: white;
 }
 
 .image-container {
   position: relative;
-  width: 100%; /* Full width container */
+  width: 100%;
+  /* Full width container */
 }
 
 .caption-overlay {
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
   font-size: 0.8rem;
   padding: 0.25rem 0.5rem;
 }
 
 .accordion-button {
-  background-color: #dee2e6 !important; /* light grey */
+  background-color: #dee2e6 !important;
+  /* light grey */
 }
 
 .accordion-body {
-  background-color: #dee2e6; /* thoda light grey inside */
+  background-color: #dee2e6;
+  /* thoda light grey inside */
 }
 
 
- #headingProposal {
-    font-size: 2rem;
-  }
+#headingProposal {
+  font-size: 2rem;
+}
 
-  #headingProposal .accordion-button {
-    font-size: 2rem;
-  }
+#headingProposal .accordion-button {
+  font-size: 2rem;
+}
 
-   .move-arrow {
-    display: inline-block;
-    transition: transform 0.2s ease; /* smooth movement */
-  }
+.move-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  /* smooth movement */
+}
 
-  a:hover .move-arrow {
-    transform: translateX(4px); /* arrow thoda right move hoga */
-  }
+a:hover .move-arrow {
+  transform: translateX(4px);
+  /* arrow thoda right move hoga */
+}
 
-  .same-height-video {
-    height: 250px;       /* ← yaha aap value change kar sakti ho */
-    object-fit: cover;   /* video ko same size banata hai */
-    width: 100%;
-  }
+.same-height-video {
+  height: 250px;
+  /* ← yaha aap value change kar sakti ho */
+  object-fit: cover;
+  /* video ko same size banata hai */
+  width: 100%;
+}
 
-  .fb-video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    height: 0;
-  }
+.fb-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 ratio */
+  height: 0;
+}
 
-  .fb-video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+.fb-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
